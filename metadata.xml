@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+  <edmx:DataServices>
+    <Schema Namespace="MenuItems" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+
+      <EntityType Name="MenuItem">
+        <Key>
+          <PropertyRef Name="Id"/>
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="80"/>
+        <Property Name="Rating" Type="Edm.Int32"/>
+        <Property Name="isVegan" Type="Edm.Boolean"/>
+        <Property Name="Calories" Type="Edm.Int32"/>
+        <Property Name="Description" Type="Edm.String" MaxLength="200"/>
+      </EntityType>
+
+      <EntityContainer Name="YourServiceContainer">
+        <EntitySet Name="MenuItems" EntityType="MenuItems.MenuItem"/>
+      </EntityContainer>
+
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>
+
+
+
+
